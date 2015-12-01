@@ -12,9 +12,5 @@ for pair in test_strings do
   first_string = pair.first.chars.to_a
   second_string = pair.last.chars.to_a
   intersection = first_string & second_string
-  if intersection.empty?
-    puts 'NO'
-  else
-    puts 'YES'
-  end
+  intersection.empty? ? (puts 'NO') : (puts 'YES')
 end
