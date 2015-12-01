@@ -9,15 +9,18 @@ for a0 in (0..t-1)
     integers << n
 end
 
+j = 0
+
 for integer in integers do
   digits << integer.to_s.chars.map(&:to_i)
   digits.each do |i|
     for digit in i do
       if integer % digit == 0
-        p 1
+        j += 1
       end
     end
   end
+  p j
 end
 
 # digits << integer.to_s.chars.map!(&:to_i)
