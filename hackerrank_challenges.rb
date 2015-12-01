@@ -9,9 +9,9 @@ for a0 in (0..t-1)
     integers << n
 end
 
-j = 0
 
 for integer in integers do
+  j = 0
   digits << integer.to_s.chars.map(&:to_i)
   digits.each do |i|
     for digit in i do
