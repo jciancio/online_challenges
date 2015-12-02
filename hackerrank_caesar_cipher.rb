@@ -1,23 +1,34 @@
 n = gets.strip.to_i
 s = gets.strip
-k = gets.strip.to_i
-
-letters_value = []
-
-s.each_byte do |c|
-  c += k
-  letters_value << c
-end
+key = gets.strip.to_i
 
 encrypted_message = []
 
-letters_value.each do |letter|
-  encrypted_message << letter.chr
+s.each_char do |c|
+  val = c.ord
+  val += key
+  if c == c.upcase
+    if val > 'Z'.ord
+      num -= 26
+    end
+  else
+    if val > 'z'.ord
+      num -= 26
+    end
+  end
+  encrypted_message << val.chr
 end
 
 p encrypted_message.join
-
-# letters = s.to_s.chars.to_a
-# for letter in letters do
-#   letter.
+# s.each_byte do |c|
+#   c += k
+#   letters_value << c
 # end
+
+# encrypted_message = []
+
+# letters_value.each do |letter|
+#   encrypted_message << letter.chr
+# end
+
+# p encrypted_message.join
