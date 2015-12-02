@@ -9,11 +9,11 @@ s.each_char do |c|
   val += key
   if c == c.upcase
     if val > 'Z'.ord
-      num -= 26
+      val -= 26
     end
   else
     if val > 'z'.ord
-      num -= 26
+      val -= 26
     end
   end
   encrypted_message << val.chr
