@@ -6,12 +6,8 @@ encrypted_message = []
 val = ""
 
 s.each_char do |c|
-  if (c =~ /[a-z]/) || (c =~ /[A-Z]/)
-    val = c.ord
-    val += key
-  else
-    val = c.ord
-  end
+  val = c.ord
+  (c =~ /[a-z]/) || (c =~ /[A-Z]/) ? val += key : val = c.ord
   if c == c.upcase
     if val > 'Z'.ord
       val -= 26
