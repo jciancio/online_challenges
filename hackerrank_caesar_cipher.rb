@@ -3,15 +3,20 @@ s = gets.strip
 key = gets.strip.to_i
 
 encrypted_message = []
+val = ""
 
 s.each_char do |c|
-  val = c.ord
-  val += key
+  if (c =~ /[a-z]/) || (c =~ /[A-Z]/)
+    val = c.ord
+    val += key
+  else
+    val = c.ord
+  end
   if c == c.upcase
     if val > 'Z'.ord
       val -= 26
     end
-  else
+  elsif c == c.downcase
     if val > 'z'.ord
       val -= 26
     end
@@ -20,15 +25,3 @@ s.each_char do |c|
 end
 
 p encrypted_message.join
-# s.each_byte do |c|
-#   c += k
-#   letters_value << c
-# end
-
-# encrypted_message = []
-
-# letters_value.each do |letter|
-#   encrypted_message << letter.chr
-# end
-
-# p encrypted_message.join
