@@ -24,4 +24,4 @@ s.each_char do |c|
   encrypted_message << val.chr
 end
 
-p encrypted_message.join
+puts encrypted_message.join
