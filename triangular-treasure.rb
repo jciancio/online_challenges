@@ -4,9 +4,9 @@ def triangular( n )
   end
   x = 0
   z = 1
-  until z == n do
-    x + z
-    z + 1
+  until z == (n + 1) do
+    x += z
+    z += 1
   end
-  z
+  p x
 end
