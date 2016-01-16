@@ -1,3 +1,5 @@
+# Function Returns the nth Triangular Number
+
 def triangular( n )
   if n < 0
     0
