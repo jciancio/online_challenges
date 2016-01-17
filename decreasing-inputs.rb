@@ -1,3 +1,5 @@
+# This function adds the given values after dividing them by their index.
+
 def add(*args)
   answer = 0
   i = 0
@@ -5,7 +7,5 @@ def add(*args)
     answer += args[i].to_f/(i + 1)
     i += 1
   end
-  p answer.round
+  answer.round
 end
-
-add(4,-3,-2)
